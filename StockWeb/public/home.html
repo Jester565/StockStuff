@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<!--Import Google Icon Font-->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!--Import materialize.css-->
+	<link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+	<link type="text/css" rel="stylesheet" href="css/hidden.css" />
+	<!--Let browser know website is optimized for mobile-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+	<!--Import jQuery before materialize.js-->
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="js/materialize.min.js"></script>
+	<script type="text/javascript" src="js/indexdisp.js"></script>
+	<script type="text/javascript" src="js/aws-cognito-sdk.min.js"></script>
+	<script type="text/javascript" src="js/amazon-cognito-identity.min.js"></script>
+	<script type="text/javascript" src="js/aws-sdk.js"></script>
+	<!--ApiGateway-->
+	<script type="text/javascript" src="js/lib/axios/dist/axios.standalone.js"></script>
+	<script type="text/javascript" src="js/lib/CryptoJS/rollups/hmac-sha256.js"></script>
+	<script type="text/javascript" src="js/lib/CryptoJS/rollups/sha256.js"></script>
+	<script type="text/javascript" src="js/lib/CryptoJS/components/hmac.js"></script>
+	<script type="text/javascript" src="js/lib/CryptoJS/components/enc-base64.js"></script>
+	<script type="text/javascript" src="js/lib/url-template/url-template.js"></script>
+	<script type="text/javascript" src="js/lib/apiGatewayCore/sigV4Client.js"></script>
+	<script type="text/javascript" src="js/lib/apiGatewayCore/apiGatewayClient.js"></script>
+	<script type="text/javascript" src="js/lib/apiGatewayCore/simpleHttpClient.js"></script>
+	<script type="text/javascript" src="js/lib/apiGatewayCore/utils.js"></script>
+	<script type="text/javascript" src="js/apigClient.js"></script>
+	<!--Chart-->
+	<script type="text/javascript" src="js/moment.js"></script>
+	<script type="text/javascript" src="js/Chart.js"></script>
+	<!--Custom-->
+	<script type="text/javascript" src="js/accountmanager.js"></script>
+	<script type="text/javascript" src="js/pagemanager.js"></script>
+	<script type="text/javascript" src="js/StockManager.js"></script>
+	<script type="text/javascript" src="js/home.js"></script>
+	<div id="navInclude"></div>
+	<div id="pageContent" class="hidden">
+		<div id="performanceContent" class="hidden">
+			<div class="section no-pad-bot" id="index-banner">
+				<div class="container">
+					<h5 class="header center blue-text">Your Performance</h5>
+				</div>
+			</div>
+			<div class="row" style="height: 50vh;">
+				<canvas id="myChart"></canvas>
+			</div>
+			<div class="section no-pad-bot" id="index-banner">
+				<div class="container">
+					<h5 class="header center blue-text">Investments</h5>
+				</div>
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col s10 m8 l6 offset-s1 offset-m2 offset-l3">
+						<ul class="collection" id="investmentCollection"></ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="noInvestmentsContent" class="hidden">
+			<div class="section no-pad-bot" id="index-banner">
+				<div class="container">
+					<h2 class="header center blue-text">No Investments</h2>
+					<h5 class="header center blue-text">Looks like you have no investments, click the button below to make one</h5>
+				</div>
+			</div>
+		</div>
+
+		<div class="center-align">
+			<a class="waves-effect waves-light btn modal-trigger light-blue" href="#modal1">Add Investment</a>
+		</div>
+
+		<!-- Modal Structure -->
+		<div id="modal1" class="modal">
+			<div class="modal-content">
+				<form class="col s10 m8 l6 offset-s1 offset-m2 offset-l3">
+					<div class="row">
+						<div class="input-field col s12">
+							<input id="symbol" type="text" class="validate">
+							<label for="symbol">Stock Symbol</label>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<a class="btn" id="invest">Go</a>
+			</div>
+		</div>
+		<div id="editmodal" class="modal">
+			<div class="modal-content">
+				<form class="col s10 m8 l6 offset-s1 offset-m2 offset-l3">
+					<div class="row">
+						<h2 id="symbolModalForm">VTI</h2>
+					</div>
+					<div class="row">
+						<h5>Percent to Sell: <a id="holdPercentModalForm"></a>%</h5>
+					</div>
+					<div class="row">
+						<h5>Rules</h5>
+						<ul id="rulesListModalForm">
+
+						</ul>
+					</div>
+					<div class="row">
+						<p>Update Emails</p>
+						<div class="switch">
+							<label>
+								Disabled
+								<input type="checkbox" id="emailSwitch">
+								<span class="lever"></span>
+								Enabled
+							</label>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<a class="btn deleteInvestment">Delete</a>
+			</div>
+			<div class="modal-footer">
+				<a class="btn" id="saveModalForm">Save</a>
+			</div>
+		</div>
+	</div>
+	<br />
+	<br />
+</body>
+
+</html>

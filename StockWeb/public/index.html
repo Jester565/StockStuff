@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<!--Import Google Icon Font-->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!--Import materialize.css-->
+	<link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+	<link type="text/css" rel="stylesheet" href="css/hidden.css"/>
+
+	<!--Let browser know website is optimized for mobile-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+	<!--Import jQuery before materialize.js-->
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="js/materialize.min.js"></script>
+	<script type="text/javascript" src="js/indexdisp.js"></script>
+	<script type="text/javascript" src="js/aws-cognito-sdk.min.js"></script>
+	<script type="text/javascript" src="js/amazon-cognito-identity.min.js"></script>
+	<script type="text/javascript" src="js/aws-sdk.js"></script>
+	<!--Chart-->
+	<script type="text/javascript" src="js/moment.js"></script>
+	<script type="text/javascript" src="js/Chart.js"></script>
+	<!--Custom-->
+	<script type="text/javascript" src="js/accountmanager.js"></script>
+	<script type="text/javascript" src="js/pagemanager.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+	<div id="navInclude"></div>
+	<div id="pageContent" class="hidden">
+		<div class="section no-pad-bot" id="index-banner">
+			<div class="container">
+				<br><br>
+				<h1 class="header center blue-text">Stock Stuff</h1>
+				<div class="row center">
+					<h5 class="header col s12 light">Doing all of your stock stuff</h5>
+				</div>
+				<div class="row center">
+					<a href="./signup.html" id="download-button" class="btn-large waves-effect waves-light orange">Sign Up</a>
+				</div>
+				<br><br>
+			</div>
+		</div>
+		<div class="container">
+			<div class="section">
+
+				<!--   Icon Section   -->
+				<div class="row">
+					<div class="col s6">
+						<div class="icon-block">
+							<h2 class="center light-blue-text"><i class="medium material-icons">show_chart</i></h2>
+							<h5 class="center">View Stocks</h5>
+
+							<p class="light">We will show you the latest stocks prices in graphs and other displays.</p>
+						</div>
+					</div>
+
+					<div class="col s6">
+						<div class="icon-block">
+							<h2 class="center light-blue-text"><i class="medium material-icons">email</i></h2>
+							<h5 class="center">Get Notified</h5>
+
+							<p class="light">We will send you emails telling you when to buy and sell stocks based on a plan you provide.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<br><br>
+		</div>
+	</div>
+	<div class="preloader-wrapper big active">
+		<div class="spinner-layer spinner-blue-only">
+			<div class="circle-clipper left">
+				<div class="circle"></div>
+			</div><div class="gap-patch">
+				<div class="circle"></div>
+			</div><div class="circle-clipper right">
+				<div class="circle"></div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

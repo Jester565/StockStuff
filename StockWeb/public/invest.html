@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<!--Import Google Icon Font-->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!--Import materialize.css-->
+	<link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+	<link type="text/css" rel="stylesheet" href="css/hidden.css" />
+	<!--Let browser know website is optimized for mobile-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+	<!--Import jQuery before materialize.js-->
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="js/materialize.min.js"></script>
+	<script type="text/javascript" src="js/indexdisp.js"></script>
+	<script type="text/javascript" src="js/aws-cognito-sdk.min.js"></script>
+	<script type="text/javascript" src="js/amazon-cognito-identity.min.js"></script>
+	<script type="text/javascript" src="js/aws-sdk.js"></script>
+	<!--ApiGateway-->
+	<script type="text/javascript" src="js/lib/axios/dist/axios.standalone.js"></script>
+	<script type="text/javascript" src="js/lib/CryptoJS/rollups/hmac-sha256.js"></script>
+	<script type="text/javascript" src="js/lib/CryptoJS/rollups/sha256.js"></script>
+	<script type="text/javascript" src="js/lib/CryptoJS/components/hmac.js"></script>
+	<script type="text/javascript" src="js/lib/CryptoJS/components/enc-base64.js"></script>
+	<script type="text/javascript" src="js/lib/url-template/url-template.js"></script>
+	<script type="text/javascript" src="js/lib/apiGatewayCore/sigV4Client.js"></script>
+	<script type="text/javascript" src="js/lib/apiGatewayCore/apiGatewayClient.js"></script>
+	<script type="text/javascript" src="js/lib/apiGatewayCore/simpleHttpClient.js"></script>
+	<script type="text/javascript" src="js/lib/apiGatewayCore/utils.js"></script>
+	<script type="text/javascript" src="js/apigClient.js"></script>
+	<!--Chart-->
+	<script type="text/javascript" src="js/moment.js"></script>
+	<script type="text/javascript" src="js/Chart.js"></script>
+	<!--Custom-->
+	<script type="text/javascript" src="js/accountmanager.js"></script>
+	<script type="text/javascript" src="js/pagemanager.js"></script>
+	<script type="text/javascript" src="js/StockManager.js"></script>
+	<script type="text/javascript" src="js/invest.js"></script>
+	<div id="navInclude"></div>
+	<div id="pageContent" class="hidden">
+		<div class="section no-pad-bot" id="index-banner">
+			<div class="container">
+				<h5 class="header center blue-text">Historical Performance</h5>
+			</div>
+		</div>
+		<div class="row" style="height: 50vh;">
+			<canvas id="myChart"></canvas>
+		</div>
+		<div class="section no-pad-bot" id="index-banner">
+			<div class="container">
+				<h5 class="header center blue-text">Investments</h5>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="categories-container pin-top" style="top: 0px;">
+					<!--<div class="col s10 m8 l6 offset-s1 offset-m2 offset-l3">-->
+					<ul class="categories db" id="investmentCollection"></ul>
+				</div>
+			</div>
+			<div class="center-align">
+				<button class="btn waves-effect waves-light" id="addInvestment" type="button">
+					Add Investment
+				</button>
+			</div>
+		</div>
+		<div class="row center-align">
+			<br />
+			<br />
+			<h4>Click Invest to Complete Investment</h4>
+			<a class='dropdown-button btn' data-activates='investmentDropdown'>Invest</a>
+
+			<ul id='investmentDropdown' class='dropdown-content'></ul>
+		</div>
+	</div>
+</body>
+
+</html>

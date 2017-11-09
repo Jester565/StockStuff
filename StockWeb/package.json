@@ -1,0 +1,9 @@
+{
+  "name": "stock-web",
+  "version": "0.0.0",
+  "description": "StockWeb",
+  "main": "server.js",
+  "author": {
+    "name": "ajcra"
+  }
+}

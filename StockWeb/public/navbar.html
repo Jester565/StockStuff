@@ -1,0 +1,24 @@
+﻿<ul id="userDropdown" class="dropdown-content">
+	<li><a href="./home.html">Home</a></li>
+	<li><a class="signOutNB">Sign Out</a></li>
+</ul>
+
+<nav class="light-blue lighten-1" role="navigation">
+	<div class="nav-wrapper container">
+		<a id="logo-container" href="#" class="brand-logo"><img src="./imgs/stockinvesting.png" height="52" /></a>
+		<ul class="right hide-on-med-and-down">
+			<li class="loggedOut hidden"><a href="./signin.html">Sign In</a></li>
+			<li class="loggedOut hidden"><a href="./signup.html">Sign Up</a></li>
+			<!-- Dropdown Trigger -->
+			<li class="loggedIn hidden"><a class="dropdown-button usernameNB" data-activates="userDropdown"><i class="material-icons right">arrow_drop_down</i></a></li>
+		</ul>
+		<ul id="nav-mobile" class="side-nav">
+			<li class="loggedOut hidden"><a href="./signin.html">Sign In</a></li>
+			<li class="loggedOut hidden"><a href="./signup.html">Sign Up</a></li>
+			<li class="loggedIn hidden"><a><b><span class="usernameNB"></span></b></a></li>
+			<li class="loggedIn hidden"><a href="./home.html">Home</a></li>
+			<li class="loggedIn hidden"><a class="signOutNB">Sign Out</a></li>
+		</ul>
+		<a data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+	</div>
+</nav>
