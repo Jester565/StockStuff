@@ -115,9 +115,19 @@ function InvestManager() {
 															<input id="compAvgDays" type="number" min="0" type="text" class="validate">
 															<label for="compAvgDays">Comparison Average (Trading Days)</label>
 														</div>
-														<div class="input-field col s12">
-															<input id="checkFreq" type="number" min="0" class="validate">
-															<label for="checkFreq">Check Frequency (Trading Days)</label>
+														<div class="container">
+															<h6><b>Check Frequency</b></h6>
+															<div class="input-field col s12">
+																<select id="checkFreqModeSelect">
+																	<option value="0">Trading Days</option>
+																	<option value="1">Day of Month</option>
+																	<option value="2">Day of Week</option>
+																</select>
+															</div>
+															<div class="input-field col s12">
+																<input id="checkFreq" type="text" min="0" class="validate">
+																<label for="checkFreq">Check Freq Value</label>
+															</div>
 														</div>
 														<div class="input-field col s12">
 															<select id="modeSelect">
@@ -135,6 +145,7 @@ function InvestManager() {
 												</form>`;
 		investElm.find('.ruleCollection').append(ruleHtml);
 		investElm.find('#modeSelect').material_select();
+		investElm.find('#checkFreqModeSelect').material_select();
 	};
 
 	$(document).on('click', '.addRule', function (event) {
