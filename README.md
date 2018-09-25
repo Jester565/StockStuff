@@ -1,5 +1,3 @@
 # StockStuff
-Does stock stuff
-##TODO
-* A check frequency based on day of month of day of week
-* Ask user for amount to invest, convert it to shares, and use that in calculations
+[Running Here](http://stockstuffweb.s3-website-us-west-2.amazonaws.com/home.html).<br/>
+Evalutate performance of simple rules against a stock symbol's history.  StockStuff is powered by AlphaVantage, Lambda, & Cognito.
